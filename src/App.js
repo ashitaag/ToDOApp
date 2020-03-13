@@ -35,7 +35,7 @@ class App extends Component{
     }
 
     refreshData(){
-        axios.get(`https://personal.utdallas.edu/~ary190000/todoapi/`)
+        axios.get(`https://personal.utdallas.edu/~axa190005/todoapi/`)
             .then(res => {
                 const res_items = res.data;
 
@@ -55,7 +55,7 @@ class App extends Component{
     }
 
     handleCompleted(id){
-        axios.get(`https://personal.utdallas.edu/~ary190000/todoapi/toggleState/`+id)
+        axios.get(`https://personal.utdallas.edu/~axa190005/todoapi/toggleState/`+id)
             .then(res => {
                 const res_items = res.data;
                 console.log(res_items);
@@ -75,7 +75,7 @@ class App extends Component{
     }
 
     handleNotCompleted(id){
-        axios.get(`https://personal.utdallas.edu/~ary190000/todoapi/toggleState/`+id)
+        axios.get(`https://personal.utdallas.edu/~axa190005/todoapi/toggleState/`+id)
             .then(res => {
                 const res_items = res.data;
                 console.log(res_items);
@@ -95,7 +95,7 @@ class App extends Component{
     }
 
     handleInCompleteDelete(id){
-        axios.delete(`https://personal.utdallas.edu/~ary190000/todoapi/`+id)
+        axios.delete(`https://personal.utdallas.edu/~axa190005/todoapi/`+id)
             .then(res => {
                 const res_items = res.data;
                 console.log(res_items);
@@ -112,7 +112,7 @@ class App extends Component{
     }
 
     handleCompletedDelete(id){
-        axios.delete(`https://personal.utdallas.edu/~ary190000/todoapi/`+id)
+        axios.delete(`https://personal.utdallas.edu/~axa190005/todoapi/`+id)
             .then(res => {
                 const res_items = res.data;
                 console.log(res_items);
@@ -129,7 +129,7 @@ class App extends Component{
     }
 
     handleAddItem(data){
-        axios.post('https://personal.utdallas.edu/~ary190000/todoapi/', data, {}).then(res => {
+        axios.post('https://personal.utdallas.edu/~axa190005/todoapi/', data, {}).then(res => {
 
             if(res.data.result){
                 var inc = this.state.inCompleteItems;
